@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../My97DatePicker/WdatePicker.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <style>
+        div{
+            text-align: center;
+            width: 300px;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" name="time" class="Wdate" onfocus="WdatePicker({lang:'zh-cn'})"
+               name="" id="find_content" value="">
+        <input type="submit" id="sub" value="查找" />
+    </div>
+    <section id="content">
+
+    </section>
+</body>
+</html>
+<script>
+$(document).ready(function() {
+//提交推文
+    $("#sub").click(function () {
+        var data = {
+            time: $("#find_content").val()
+        };
+        var jsonData = JSON.stringify(data);
+        $.get(
+                "history.php",
+                jsonData,
+                function (data) {
+                    $("#content").html(data);
+                }
+        );
+    });
+});
+</script>

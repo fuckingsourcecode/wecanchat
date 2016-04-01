@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+<!--[if IE]>
+<script>
+(function(){if(!/*@cc_on!@*/0)return;var e = "header,footer,nav,article,section".split(','),i=e.length;while(i--){document.createElement(e[i])}})()
+</script>
+<![endif]--> 
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+	<header>
+		<div class="top"><div class="colors"></div></div>
+		<span class="first_word">We</span>
+		<span>c<span class="my_word_a">a</span>n</span>
+		<span>ch<span class="my_word_a">a</span>t</span>
+		<span class="link_info">
+			<a href="">首页</a>|<a class="index" href="">登录</a>
+		</span>
+	</header>
+	<nav>
+		<img class="img img_left" src="images/head_1.png" style="width: 118px;height: 132px;" />
+
+		<img class="img img_right" src="images/head_2.png" style="width: 118px;height: 132px;" />
+		<img class="img img_logo" src="images/logo.png">
+		<div class="img img_back"></div>
+	    <div class="container">
+	    	<div class="login_name">Login Panel</div>
+			<div class="login">
+				 <form method="POST" action="index.php">
+					<div class="login_info">
+						<input type="email" name="email" value="" placeholder="email">
+						</div>
+					<div class="login_info">
+				    	<input type="password" name="password" value="" placeholder=" password">
+				    	</div>
+			    	<div class="login_btn">
+			    		<input type="submit" class="button" name="" value="登陆">
+			    	</div>
+				</form>
+			</div>
+	    	<div class="other_btn">
+	    		<input type="checkbox" checked="checked" id="remember" name="" value="" />
+	    		<label for="remember" class="remember">记住我</label>
+	    		<a href="forget_password/forget_password.html" class="forget_password">Forget Password?</a>
+	    	</div>
+	    	<div class="regist">
+	    		<span>
+	    			Not have an account?
+	    		</span>
+	    		<a href="register/register.html">Register now</a>
+	    	</div>
+	    </div>
+	</nav>
+	<footer>
+		<ul>
+		    <li><a href="footerlink/classbrief.html" title="">@0411303</a></li>
+		    <li><a href="footerlink/0411303.html" title="">Contact us</a></li>
+		    <li><a href="footerlink/help.html" title="">Help</a></li>
+		    <li><a href="footerlink/about.html" title="">About</a></li>
+		    <li><a href="footerlink/status.html" title="">Status</a></li>
+		    <li><a href="footerlink/features.html" title="">Features</a></li>
+		</ul>
+	</footer>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+		//footer hover变化
+		$("footer ul li").hover(function(){
+			$("footer ul").css({background:'#DEDEDE'});
+			$("footer ul li a").css({color:'#03A9FC'});
+		},function(){
+			$("footer ul").css({background:'#03A9FC'});
+			$("footer ul li a").css({color:'#fff'});
+		});
+		//logo充电
+		$("nav .img_logo").mouseover(function(){
+			$img_back = $("nav .img_back");
+			$img_back.animate({height:'400'},3000,function(){
+				$("nav .img").addClass("end");
+				$("nav .img").addClass("clicked");
+				if($("nav .img").hasClass("clicked")){
+					$("nav .container").addClass("start").show();
+					$("nav").addClass("snow");
+					}
+				});
+			});
+		//点击登陆按钮弹出
+		$("header .link_info a").click(function(){
+			$img_back = $("nav .img_back");
+			$img_back.animate({height:'400'},2500,function(){
+				$("nav .img").addClass("end");
+				});
+			});
+		function flash(){
+			function cback(e) {
+				var t = [];
+				for (var n = inputs.length; n--;) {
+    			if (!inputs[n].value.length) t.push(inputs[n]);
+					}
+				var r = t.length;
+				var i = inputs.length;
+				var s = document.querySelectorAll(".top");
+				for (var o = s.length; o--;) {
+    			s[o].style.width = 100 - r / i * 100 + "%";
+    			s[o].style.background = cols[i-r-1];
+					}
+				}
+				var forms = document.querySelectorAll("form"),
+				inputs = [];
+				for (var i = forms.length; i--;) {
+					var els = forms[i].querySelectorAll("input, textarea, select");
+				for (var j = els.length; j--;) {
+    			if (els[j].type != "button" && els[j].type != "submit") {
+        			inputs.push(els[j]);
+        			els[j].addEventListener("input", cback, false);
+    			}
+			}
+		}
+
+				var cols = ["#1ABC9C","#EC7063","#3498DB"];
+			}
+			flash();
+	</script>
+</body>
+</html>

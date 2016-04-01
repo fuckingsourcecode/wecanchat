@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>班级简介</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			}
+		body{
+			min-width: 960px;
+			}
+		header{
+			background-color: #fff;
+			border-bottom: 1px solid rgba(0,0,0,0.3);
+			box-shadow: 1px 1px 6px rgba(0,0,0,0.3);
+			height: 40px;
+			letter-spacing: 1px;
+			}
+		header span{
+			font-size: 30px;
+			line-height: 36px;
+			font-weight: bold;
+			}
+		.first_word{
+			padding-left: 36px;
+			}
+		.my_word_a{
+			color: #00fdff;
+			}
+		.link_info{
+			margin-left: 78%;
+			}
+		.link_info a{
+			color: #010101;
+			text-decoration: none;
+			font-weight: normal;
+			font-size: 20px;
+			line-height: 36px;
+		}
+		.link_info a.index{
+			color: #0086FF;
+		}
+		.content{
+			margin-top: 6px;
+			width: 100%;
+			height: 568px;
+			background: url("../images/common_bg.png") repeat-y;
+			border: 1px solid #fff;
+		}
+		.con{
+			width: 800px;
+			height: 400px;
+			background: #fff;
+			border: 2px solid #00ccff;
+			margin-top: 100px;
+			margin-left: 280px;
+			border-radius: 20px;
+			box-shadow: 0px 0px 6px #00ccff;
+		}
+		.title{
+			width: 300px;
+			height: 80px;
+			margin-left: 44%;
+			margin-top: 20px;
+		}
+		.title span{
+			font: 40px/80px "微软雅黑";
+			color: #474747;
+		}
+		.loading{
+			margin-left: 40%;
+		}
+		.loader{
+      		font-size: 90px;
+      		text-indent: -9999em;
+      		overflow: hidden;
+      		width: 1em;
+      		height: 1em;
+      		color: #0E7EFF;
+      		border-radius: 50%;
+      		margin: 33% auto;
+      		position: absolute;
+      		top: -80px;
+      		left: 640px;
+      		-webkit-animation: load6 1.7s infinite ease;
+      		animation: load6 1.7s infinite ease;
+    		}
+    	@-webkit-keyframes load6 {
+      		0% {
+        	-webkit-transform: rotate(0deg);
+        	transform: rotate(0deg);
+        	box-shadow: -0.11em -0.83em 0 -0.4em #ffffff, -0.11em -0.83em 0 -0.42em #ffffff, -0.11em -0.83em 0 -0.44em #ffffff, -0.11em -0.83em 0 -0.46em #ffffff, -0.11em -0.83em 0 -0.477em #ffffff;
+      			}
+      		5%,95% {
+      		box-shadow: -0.11em -0.83em 0 -0.4em #ffffff, -0.11em -0.83em 0 -0.42em #ffffff, -0.11em -0.83em 0 -0.44em #ffffff, -0.11em -0.83em 0 -0.46em #ffffff, -0.11em -0.83em 0 -0.477em #ffffff;
+      			}
+      		30% {
+        	box-shadow: -0.11em -0.83em 0 -0.4em #ffffff, -0.51em -0.66em 0 -0.42em #ffffff, -0.75em -0.36em 0 -0.44em #ffffff, -0.83em -0.03em 0 -0.46em #ffffff, -0.81em 0.21em 0 -0.477em #ffffff;
+      			}
+      		55% {
+        	box-shadow: -0.11em -0.83em 0 -0.4em #ffffff, -0.29em -0.78em 0 -0.42em #ffffff, -0.43em -0.72em 0 -0.44em #ffffff, -0.52em -0.65em 0 -0.46em #ffffff, -0.57em -0.61em 0 -0.477em #ffffff;
+      			}
+      		100% {
+       		-webkit-transform: rotate(360deg);
+        	transform: rotate(360deg);
+        	box-shadow: -0.11em -0.83em 0 -0.4em #ffffff, -0.11em -0.83em 0 -0.42em #ffffff, -0.11em -0.83em 0 -0.44em #ffffff, -0.11em -0.83em 0 -0.46em #ffffff, -0.11em -0.83em 0 -0.477em #ffffff;
+      			}
+    		}
+      	@keyframes load6 {
+      		0% {
+        	-webkit-transform: rotate(0deg);
+        	transform: rotate(0deg);
+        	box-shadow: -0.11em -0.83em 0 -0.4em #0E7EFF, -0.11em -0.83em 0 -0.42em #0E7EFF, -0.11em -0.83em 0 -0.44em #0E7EFF, -0.11em -0.83em 0 -0.46em #0E7EFF, -0.11em -0.83em 0 -0.477em #0E7EFF;
+      			}
+      		5%,95% {
+        	box-shadow: -0.11em -0.83em 0 -0.4em #0E7EFF, -0.11em -0.83em 0 -0.42em #0E7EFF, -0.11em -0.83em 0 -0.44em #0E7EFF, -0.11em -0.83em 0 -0.46em #0E7EFF, -0.11em -0.83em 0 -0.477em #0E7EFF;
+      		}
+      		30% {
+        	box-shadow: -0.11em -0.83em 0 -0.4em #0E7EFF, -0.51em -0.66em 0 -0.42em #0E7EFF, -0.75em -0.36em 0 -0.44em #0E7EFF, -0.83em -0.03em 0 -0.46em #0E7EFF, -0.81em 0.21em 0 -0.477em #0E7EFF;
+    			}
+      		55% {
+        	box-shadow: -0.11em -0.83em 0 -0.4em #0E7EFF, -0.29em -0.78em 0 -0.42em #0E7EFF, -0.43em -0.72em 0 -0.44em #0E7EFF, -0.52em -0.65em 0 -0.46em #0E7EFF, -0.57em -0.61em 0 -0.477em #0E7EFF;
+    			}
+      		100% {
+        	-webkit-transform: rotate(360deg);
+        	transform: rotate(360deg);
+        	box-shadow: -0.11em -0.83em 0 -0.4em #0E7EFF, -0.11em -0.83em 0 -0.42em #0E7EFF, -0.11em -0.83em 0 -0.44em #0E7EFF, -0.11em -0.83em 0 -0.46em #0E7EFF, -0.11em -0.83em 0 -0.477em #0E7EFF;
+      			}
+    		}
+	</style>
+</head>
+<body>
+	<header>
+		<span class="first_word">We</span>
+		<span>c<span class="my_word_a">a</span>n</span>
+		<span>ch<span class="my_word_a">a</span>t</span>
+		<span class="link_info">
+			<a class="index" href="../index.html">首页</a>
+		</span>
+	</header>
+	<div class="content">
+		<div class="con">
+			<div class="title">
+				<span>status</span>
+			</div>
+			<div class="loading">资源更新中，请日后查看</div>
+		</div>
+		<div class="loader">加载中...</div>
+	</div>
+	
+</body>
+</html>

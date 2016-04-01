@@ -1,0 +1,101 @@
+body, header, footer, ul, li, div, nav{
+	padding: 0px;
+	margin: 0px;
+	font-size: 16px;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+select{
+		display: block;
+}
+
+							/*上部*/
+header{
+	height: 50px;
+	line-height: 50px;
+	position: absolute;
+	width: 100%;
+	top: 0px;
+	background-color: #48E2D4;
+}
+header ul li{
+	margin: 0 9%;
+	float: left;
+}
+/*中部*/
+nav{
+	margin-top: 50px;
+	position: absolute;
+	top:50px;
+}
+#navigation{
+	position: fixed;
+	margin-top: 50px;
+	margin-left: 20px;
+}
+#navigation li{
+	border: 2px solid #48DECD;
+	background-color: #81F05A;
+	border-radius: 10px;
+	text-align: center;
+	width: 150px;
+	margin-top: 10px;
+	height: 50px;
+	-webkit-border-radius: 10px;        /*chrome*/
+	-khtml-border-radius: 10px;
+	-moz-border-radius: 10px;			/*firefox*/  
+}
+#navigation li a{
+	font-size: 20px;
+	line-height: 50px;
+}
+article{
+	position: relative;
+	min-height: 500px;
+	margin-left: 300px;
+}
+article .content{
+	width:600px;
+	height:500px;
+	padding-left: 50px;
+	position: absolute;
+	border:1px solid #91a7b4;
+	border-radius:3px;
+	box-shadow:0 2px 3px rgba(0,0,0,0.1);
+	font-size:1em;
+	line-height:1.5em;
+	color:#666;
+	background:#fff;
+}
+#tab_account:target, #tab_password:target, #tab_seek:target, #tab_theme:target, #tab_bingbing:target{
+	z-index: 1;
+}
+article .content{
+	text-align: right;
+}
+article .content p{
+	margin: 0 auto;
+	margin-right: 12em;
+}
+article .content input{
+	line-height: 30px;
+	height: 30px;
+	margin-top: 30px;
+}
+article .content span{
+	text-align: right;
+}
+
+article .content select{
+	margin-top: 10px;
+	line-height: 30px;
+	height: 30px;
+	display: inline-block;
+	margin-left: 10px;
+}
+
+/*底部*/
